@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Reports</title>
+  <link rel="stylesheet" href="instructor.css">
+  <link rel="stylesheet" href="reports.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Instructor Dashboard</div>
+    <nav>
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Timetable</a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="main-container">
+    <aside>
+      <ul>
+        <li onclick="location.href='instructor.html'"><i class="fas fa-home"></i> Dashboard</li>
+        <li onclick="location.href='classes.html'"><i class="fas fa-calendar-alt"></i> Timetable</li> <!-- ✅ updated link -->
+        <li onclick="location.href='reports.html'"><i class="fas fa-file-alt"></i> Report</li>
+        <li onclick="location.href='settings.html'"><i class="fas fa-cog"></i> Settings</li>
+      </ul>
+    </aside>
+
+    <main>
+      <section class="view-reports">
+        <h2>Attendance Reports</h2>
+
+        <div class="report-controls">
+          <label for="classSelect">Class:</label>
+          <select id="classSelect">
+            <option>Computer Science 101</option>
+            <option>Advanced Mathematics</option>
+            <option>Data Structures</option>
+          </select>
+
+          <label for="reportDate">Date:</label>
+          <input type="date" id="reportDate">
+
+          <button id="loadReportBtn" class="new-class-btn">
+            <i class="fas fa-file-alt"></i> Load Report
+          </button>
+          <button id="refreshReport" class="new-class-btn">
+            <i class="fas fa-sync"></i> Refresh
+          </button>
+          <button id="printReport" class="new-class-btn">
+            <i class="fas fa-print"></i> Print
+          </button>
+          <button id="copyClipboard" class="new-class-btn">
+            <i class="fas fa-clipboard"></i> Clipboard
+          </button>
+          <button id="downloadReport" class="new-class-btn">
+            <i class="fas fa-download"></i> Download Report
+          </button>
+        </div>
+
+        <div id="reportContainer" class="report-container"></div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    &copy; 2025 EduTrack. All Rights Reserved.
+  </footer>
+
+  <script src="reports.js"></script>
+</body>
+</html>

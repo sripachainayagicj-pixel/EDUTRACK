@@ -1,0 +1,196 @@
+/* ===== General Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f7f8fc;     /* updated neutral background */
+  color: #333;             /* dark gray text */
+}
+
+/* ===== Header ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;       /* white header */
+  border-bottom: 2px solid #e5e3f0; /* light lavender border */
+  color: #5e4b8b;            /* muted purple text */
+  padding: 15px 30px;
+}
+
+header .logo {
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #5e4b8b;            /* purple logo */
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #5e4b8b;            /* purple links */
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #8e6edc;            /* lighter purple hover */
+}
+
+/* ===== Main Container ===== */
+.main-container {
+  display: flex;
+  min-height: calc(100vh - 70px);
+}
+
+/* ===== Sidebar ===== */
+aside {
+  width: 220px;
+  background-color: #f9f8fe;   /* faint lavender tint */
+  border-right: 1px solid #e5e3f0;
+  padding-top: 20px;
+}
+
+aside ul {
+  list-style: none;
+}
+
+aside ul li {
+  padding: 15px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+  color: #4a3c70;   /* deep gray-purple text */
+  font-weight: 500;
+}
+
+aside ul li.active,
+aside ul li:hover {
+  background: rgba(142, 110, 220, 0.08); /* light purple hover */
+  border-radius: 0 25px 25px 0;
+  color: #5e4b8b;  /* purple active text */
+}
+
+aside ul li i {
+  min-width: 20px;
+  text-align: center;
+  color: #8e6edc;  /* purple icons */
+}
+
+/* ===== Main Content ===== */
+main {
+  flex: 1;
+  padding: 25px 30px;
+  overflow-x: auto;
+  background: #f7f8fc;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tab-content h2 {
+  margin-bottom: 20px;
+  color: #5e4b8b; /* purple heading */
+  font-weight: 700;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== Week Grid: Monday to Friday ===== */
+.week-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.day {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.day h3 {
+  margin-bottom: 12px;
+  color: #8e6edc; /* purple day title */
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ===== Class Cards ===== */
+.class-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e3f0;
+  margin-bottom: 10px;
+  padding: 10px 14px;
+  border-left: 5px solid #8e6edc;  /* purple accent */
+  border-radius: 8px;
+  font-size: 14px;
+  color: #2e2e2e;
+  font-weight: 500;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.class-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+  border-left-color: #7b5fc8;  /* darker purple on hover */
+}
+
+.class-card p {
+  margin: 0;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1200px) {
+  .week-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  aside {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    border-right: none;
+    border-bottom: 1px solid #e5e3f0;
+  }
+
+  aside ul {
+    display: flex;
+  }
+
+  aside ul li {
+    flex: 1;
+    border-radius: 0;
+    justify-content: center;
+  }
+}
+/* Back button styling */
+.back-btn {
+  background: transparent;
+  border: none;
+  color: #8e6edc;
+  font-size: 1rem;
+  cursor: pointer;
+}

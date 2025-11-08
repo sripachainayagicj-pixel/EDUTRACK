@@ -1,0 +1,93 @@
+.instructor-profile {
+  padding: 30px;
+  text-align: center;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  background: #ffffff;
+  border: 1px solid #e5e3f0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  margin-top: 20px;
+}
+
+.profile-picture i {
+  color: #8e6edc;
+}
+
+.profile-info p {
+  font-size: 16px;
+  margin: 8px 0;
+  color: #333;
+}
+
+.profile-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.profile-actions .new-class-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #8e6edc;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.profile-actions .new-class-btn:hover {
+  background: #7b5fc8;
+}
+
+.logout-btn {
+  background: #dc3545;
+}
+
+.logout-btn:hover {
+  background: #c82333;
+}
+.profile-section {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.profile-section h2 {
+  color: #5e4b8b;
+  margin-bottom: 20px;
+}
+
+.profile-section label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.profile-section input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e5e3f0;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.profile-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}

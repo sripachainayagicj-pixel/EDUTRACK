@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Check-in</title>
+</head>
+<body>
+  <h2>Attendance Check-in</h2>
+  <p id="message"></p>
+
+  <script>
+    // Extract query params from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const className = urlParams.get("class");
+    const token = urlParams.get("token");
+
+    // Normally, you'd send this info to the server with student ID
+    // For demo, just show success message
+    if (className && token) {
+      document.getElementById("message").textContent =
+        `✅ You are marked present for ${className}`;
+    } else {
+      document.getElementById("message").textContent =
+        "❌ Invalid QR code.";
+    }
+  </script>
+</body>
+</html>

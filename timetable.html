@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Department Timetables</title>
+<link rel="stylesheet" href="timetable.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<header class="topbar">
+    <button class="back-btn" onclick="history.back()">← Back</button>
+    <div class="logo">Weekly Timetables</div>
+    <div></div>
+     <nav>
+    <ul>
+      <li><a href="dashboard.html">Dashboard</a></li>
+    </ul>
+  </nav>
+  </header>
+<div class="main-container">
+  <!-- Sidebar -->
+  <aside>
+    <ul>
+      <li class="tab active" data-target="cse"><i class="fa-solid fa-computer"></i> CSE</li>
+      <li class="tab" data-target="it"><i class="fa-solid fa-network-wired"></i> IT</li>
+      <li class="tab" data-target="mech"><i class="fa-solid fa-cogs"></i> MECH</li>
+      <li class="tab" data-target="ece"><i class="fa-solid fa-microchip"></i> ECE</li>
+      <li class="tab" data-target="eee"><i class="fa-solid fa-bolt"></i> EEE</li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main>
+    <!-- CSE -->
+    <section id="cse" class="tab-content active">
+      <h2>CSE Department</h2>
+      <div class="week-grid">
+        <div class="day">
+          <h3>Monday</h3>
+          <div class="class-card"><p>9:00–10:00: Data Structures</p></div>
+          <div class="class-card"><p>10:30–11:30: DBMS</p></div>
+          <div class="class-card"><p>11:45–12:45: Algorithms</p></div>
+          <div class="class-card"><p>1:30–2:30: Web Tech</p></div>
+        </div>
+        <div class="day">
+          <h3>Tuesday</h3>
+          <div class="class-card"><p>9:00–10:00: OS</p></div>
+          <div class="class-card"><p>10:30–11:30: Networks</p></div>
+          <div class="class-card"><p>11:45–12:45: Project</p></div>
+          <div class="class-card"><p>1:30–2:30: OS Lab</p></div>
+        </div>
+        <div class="day">
+          <h3>Wednesday</h3>
+          <div class="class-card"><p>9:00–10:00: AI</p></div>
+          <div class="class-card"><p>10:30–11:30: AI Lab</p></div>
+          <div class="class-card"><p>11:45–12:45: DBMS Lab</p></div>
+          <div class="class-card"><p>1:30–2:30: Compiler</p></div>
+        </div>
+        <div class="day">
+          <h3>Thursday</h3>
+          <div class="class-card"><p>9:00–10:00: ML</p></div>
+          <div class="class-card"><p>10:30–11:30: Cloud</p></div>
+          <div class="class-card"><p>11:45–12:45: Security</p></div>
+          <div class="class-card"><p>1:30–2:30: ML Lab</p></div>
+        </div>
+        <div class="day">
+          <h3>Friday</h3>
+          <div class="class-card"><p>9:00–10:00: Compiler</p></div>
+          <div class="class-card"><p>10:30–11:30: Big Data</p></div>
+          <div class="class-card"><p>11:45–12:45: Seminar</p></div>
+          <div class="class-card"><p>1:30–2:30: AI</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IT -->
+    <section id="it" class="tab-content">
+      <h2>IT Department</h2>
+      <div class="week-grid">
+        <div class="day">
+          <h3>Monday</h3>
+          <div class="class-card"><p>9:00–10:00: Networks</p></div>
+          <div class="class-card"><p>10:30–11:30: Security</p></div>
+          <div class="class-card"><p>11:45–12:45: AI</p></div>
+          <div class="class-card"><p>1:30–2:30: DBMS Lab</p></div>
+        </div>
+        <div class="day">
+          <h3>Tuesday</h3>
+          <div class="class-card"><p>9:00–10:00: Cloud</p></div>
+          <div class="class-card"><p>10:30–11:30: Big Data</p></div>
+          <div class="class-card"><p>11:45–12:45: Cloud Lab</p></div>
+          <div class="class-card"><p>1:30–2:30: AI Lab</p></div>
+        </div>
+        <div class="day">
+          <h3>Wednesday</h3>
+          <div class="class-card"><p>9:00–10:00: Project</p></div>
+          <div class="class-card"><p>10:30–11:30: Mobile App</p></div>
+          <div class="class-card"><p>11:45–12:45: Security</p></div>
+          <div class="class-card"><p>1:30–2:30: Big Data</p></div>
+        </div>
+        <div class="day">
+          <h3>Thursday</h3>
+          <div class="class-card"><p>9:00–10:00: DBMS</p></div>
+          <div class="class-card"><p>10:30–11:30: AI</p></div>
+          <div class="class-card"><p>11:45–12:45: Project</p></div>
+          <div class="class-card"><p>1:30–2:30: Cloud</p></div>
+        </div>
+        <div class="day">
+          <h3>Friday</h3>
+          <div class="class-card"><p>9:00–10:00: Web Tech</p></div>
+          <div class="class-card"><p>10:30–11:30: IOT</p></div>
+          <div class="class-card"><p>11:45–12:45: Mobile App</p></div>
+          <div class="class-card"><p>1:30–2:30: Cloud</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MECH -->
+    <section id="mech" class="tab-content">
+      <h2>MECH Department</h2>
+      <div class="week-grid">
+        <div class="day">
+          <h3>Monday</h3>
+          <div class="class-card"><p>9:00–10:00: Thermodynamics</p></div>
+          <div class="class-card"><p>10:30–11:30: Mechanics</p></div>
+          <div class="class-card"><p>11:45–12:45: CAD</p></div>
+          <div class="class-card"><p>1:30–2:30: Workshop</p></div>
+        </div>
+        <div class="day">
+          <h3>Tuesday</h3>
+          <div class="class-card"><p>9:00–10:00: Fluid Mechanics</p></div>
+          <div class="class-card"><p>10:30–11:30: Materials</p></div>
+          <div class="class-card"><p>11:45–12:45: Manufacturing</p></div>
+          <div class="class-card"><p>1:30–2:30: Mechanics Lab</p></div>
+        </div>
+        <div class="day">
+          <h3>Wednesday</h3>
+          <div class="class-card"><p>9:00–10:00: Dynamics</p></div>
+          <div class="class-card"><p>10:30–11:30: Machine Design</p></div>
+          <div class="class-card"><p>11:45–12:45: Thermal Lab</p></div>
+          <div class="class-card"><p>1:30–2:30: Mechatronics</p></div>
+        </div>
+        <div class="day">
+          <h3>Thursday</h3>
+          <div class="class-card"><p>9:00–10:00: Strength of Materials</p></div>
+          <div class="class-card"><p>10:30–11:30: CAD Lab</p></div>
+          <div class="class-card"><p>11:45–12:45: Workshop</p></div>
+          <div class="class-card"><p>1:30–2:30: Dynamics Lab</p></div>
+        </div>
+        <div class="day">
+          <h3>Friday</h3>
+          <div class="class-card"><p>9:00–10:00: Manufacturing Lab</p></div>
+          <div class="class-card"><p>10:30–11:30: Robotics</p></div>
+          <div class="class-card"><p>11:45–12:45: Material Testing</p></div>
+          <div class="class-card"><p>1:30–2:30: Thermal Lab</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ECE -->
+    <section id="ece" class="tab-content">
+      <h2>ECE Department</h2>
+      <div class="week-grid">
+        <div class="day">
+          <h3>Monday</h3>
+          <div class="class-card"><p>9:00–10:00: Circuits</p></div>
+          <div class="class-card"><p>10:30–11:30: Signals</p></div>
+          <div class="class-card"><p>11:45–12:45: Microprocessors</p></div>
+          <div class="class-card"><p>1:30–2:30: Digital Electronics</p></div>
+        </div>
+        <div class="day">
+          <h3>Tuesday</h3>
+          <div class="class-card"><p>9:00–10:00: Communication Systems</p></div>
+          <div class="class-card"><p>10:30–11:30: VLSI</p></div>
+          <div class="class-card"><p>11:45–12:45: Control Systems</p></div>
+          <div class="class-card"><p>1:30–2:30: Lab 1</p></div>
+        </div>
+        <div class="day">
+          <h3>Wednesday</h3>
+          <div class="class-card"><p>9:00–10:00: Embedded Systems</p></div>
+          <div class="class-card"><p>10:30–11:30: Digital Communication</p></div>
+          <div class="class-card"><p>11:45–12:45: Microcontroller Lab</p></div>
+          <div class="class-card"><p>1:30–2:30: Signal Processing</p></div>
+        </div>
+        <div class="day">
+          <h3>Thursday</h3>
+          <div class="class-card"><p>9:00–10:00: Antennas</p></div>
+          <div class="class-card"><p>10:30–11:30: Wireless Communication</p></div>
+          <div class="class-card"><p>11:45–12:45: Control Lab</p></div>
+          <div class="class-card"><p>1:30–2:30: DSP Lab</p></div>
+        </div>
+        <div class="day">
+          <h3>Friday</h3>
+          <div class="class-card"><p>9:00–10:00: VLSI Lab</p></div>
+          <div class="class-card"><p>10:30–11:30: Embedded Lab</p></div>
+          <div class="class-card"><p>11:45–12:45: Wireless Lab</p></div>
+          <div class="class-card"><p>1:30–2:30: Seminar</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EEE -->
+    <section id="eee" class="tab-content">
+      <h2>EEE Department</h2>
+      <div class="week-grid">
+        <div class="day">
+          <h3>Monday</h3>
+          <div class="class-card"><p>9:00–10:00: Electrical Machines</p></div>
+          <div class="class-card"><p>10:30–11:30: Power Systems</p></div>
+          <div class="class-card"><p>11:45–12:45: Control Systems</p></div>
+          <div class="class-card"><p>1:30–2:30: Measurements</p></div>
+        </div>
+        <div class="day">
+          <h3>Tuesday</h3>
+          <div class="class-card"><p>9:00–10:00: Electrical Machines Lab</p></div>
+          <div class="class-card"><p>10:30–11:30: Power Electronics</p></div>
+          <div class="class-card"><p>11:45–12:45: Renewable Energy</p></div>
+          <div class="class-card"><p>1:30–2:30: Control Lab</p></div>
+        </div>
+        <div class="day">
+          <h3>Wednesday</h3>
+          <div class="class-card"><p>9:00–10:00: Circuit Analysis</p></div>
+          <div class="class-card"><p>10:30–11:30: Switchgear</p></div>
+          <div class="class-card"><p>11:45–12:45: Protection Systems</p></div>
+          <div class="class-card"><p>1:30–2:30: Measurements Lab</p></div>
+        </div>
+        <div class="day">
+          <h3>Thursday</h3>
+          <div class="class-card"><p>9:00–10:00: Energy Systems</p></div>
+          <div class="class-card"><p>10:30–11:30: Power Electronics Lab</p></div>
+          <div class="class-card"><p>11:45–12:45: Control Systems Lab</p></div>
+          <div class="class-card"><p>1:30–2:30: Project Work</p></div>
+        </div>
+        <div class="day">
+          <h3>Friday</h3>
+          <div class="class-card"><p>9:00–10:00: Seminar</p></div>
+          <div class="class-card"><p>10:30–11:30: Workshop</p></div>
+          <div class="class-card"><p>11:45–12:45: Lab 2</p></div>
+          <div class="class-card"><p>1:30–2:30: Revision</p></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  // Tab Switching
+  document.querySelectorAll('.tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.target).classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>

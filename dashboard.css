@@ -1,0 +1,147 @@
+body {
+  margin:0;
+  font-family: 'Segoe UI', sans-serif;
+  background:#f2f4f8;
+  color:#222;
+}
+
+.app {
+  max-width: 420px;
+  margin: auto;
+  background: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Header ===== */
+header {
+  background: #ffffff;
+  padding: 15px 25px;
+  border-bottom: 2px solid #e5e3f0;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;  /* arrow + greeting aligned */
+  gap: 8px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #5e4b8b;
+}
+
+header p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #000000;
+  padding: 0;
+}
+
+/* ===== Grid Layout ===== */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  padding: 15px;
+}
+
+.grid-item {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 20px;
+}
+
+/* Scan/Analytics buttons side by side */
+.grid-item.double {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.scan, .analytics {
+  flex: 1;
+  border: none;
+  border-radius: 16px;
+  padding: 20px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.scan { background: linear-gradient(90deg,#7a5cff,#a97bff); }
+.analytics { background: linear-gradient(90deg,#7a5cff,#a97bff); }
+
+/* Cards with right-side stat */
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right-stat {
+  font-size: 14px;
+  color: #555;
+}
+
+.green-text { color: #34c759; }
+
+.big { font-size: 26px; margin: 10px 0; }
+
+/* Schedule list */
+.list {
+  padding: 0;
+  list-style: none;
+}
+
+.list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.list li:last-child { border-bottom: none; }
+
+.tag {
+  float: right;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.upcoming { background:#a97bff; }
+.current  { background:#34c759; }
+
+/* Achievements */
+.badge {
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.green  { background:#d7f5dc; }
+.yellow { background:#fff4d1; }
+
+/* Responsive */
+@media (min-width:500px){
+  .app { border-radius: 20px; margin-top:20px; }
+}

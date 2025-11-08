@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instructor Dashboard</title>
+  <link rel="stylesheet" href="instructor.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Instructor Dashboard</div>
+    <nav>
+      <ul>
+        <li><a href="instructor.html">Dashboard</a></li>
+        <li><a href="classes.html">Timetable</a></li> <!-- ✅ updated link -->
+        <li><a href="reports.html">Report</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="main-container">
+    <aside>
+      <ul>
+        <li onclick="location.href='instructor.html'"><i class="fas fa-home"></i> Dashboard</li>
+        <li onclick="location.href='classes.html'"><i class="fas fa-calendar-alt"></i> Timetable</li> <!-- ✅ updated link -->
+        <li onclick="location.href='reports.html'"><i class="fas fa-file-alt"></i> Report</li>
+        <li onclick="location.href='settings.html'"><i class="fas fa-cog"></i> Settings</li>
+      </ul>
+    </aside>
+
+    <main>
+      <!-- Welcome Section -->
+      <section class="welcome">
+        <h1>Welcome back to your attendance management portal</h1>
+      </section>
+
+      <!-- Stats Cards -->
+      <section class="stats-cards">
+        <div class="card">
+          <h2>Instructor</h2>
+          <p>Profile</p>
+        </div>
+        <div class="card">
+          <h2>Total Students</h2>
+          <p>247 <span class="sub">+2 this semester</span></p>
+        </div>
+        <div class="card">
+          <h2>Average Attendance</h2>
+          <p>87% <span class="sub">+3% this week</span></p>
+        </div>
+        <div class="card">
+          <h2>Active Classes</h2>
+          <p>8 <span class="sub">3 today</span></p>
+        </div>
+        <div class="card">
+          <h2>Reports Generated</h2>
+          <p>156 <span class="sub">24 this month</span></p>
+        </div>
+      </section>
+
+      <!-- Quick Actions -->
+      <section class="quick-actions">
+        <h2>Quick Actions</h2>
+        <div class="actions">
+          <div class="action-card" onclick="location.href='generate-qr.html'">
+            <i class="fas fa-qrcode"></i>
+            <h3>Generate QR Code</h3>
+            <p>Create attendance QR for current class</p>
+          </div>
+          <div class="action-card" onclick="location.href='reports.html'">
+            <i class="fas fa-file-alt"></i>
+            <h3>View Reports</h3>
+            <p>Access detailed attendance analytics</p>
+          </div>
+          <div class="action-card" onclick="location.href='classes.html'">
+            <i class="fas fa-calendar-alt"></i>
+            <h3>Timetable</h3>
+            <p>View each department Timetable</p>
+          </div>
+          <div class="action-card" onclick="location.href='settings.html'">
+            <i class="fas fa-cog"></i>
+            <h3>Settings</h3>
+            <p>Configure system preferences</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Today's Classes -->
+      <section class="today-classes">
+        <h2>Today's Classes <span class="view-all">View All</span></h2>
+        <div class="class-card completed">
+          <h3>Computer Science 101</h3>
+          <p>09:00 AM • Room 301</p>
+          <p>Students: 45 | Present: 42 | Attendance: 93%</p>
+          <span class="status">completed</span>
+        </div>
+        <div class="class-card in-progress">
+          <h3>Advanced Mathematics</h3>
+          <p>11:00 AM • Room 205</p>
+          <p>Students: 38 | Present: 35 | Attendance: 92%</p>
+          <span class="status">in-progress</span>
+        </div>
+      </section>
+
+      <!-- Recent Activity -->
+      <section class="recent-activity">
+        <h2>Recent Activity</h2>
+        <ul>
+          <li><strong>High attendance rate achieved:</strong> Computer Science 101 reached 93% attendance today</li>
+          <li><strong>Low attendance alert:</strong> Physics Lab attendance dropped below 80% this week</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
+
+

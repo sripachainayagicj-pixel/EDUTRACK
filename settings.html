@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instructor Profile</title>
+  <link rel="stylesheet" href="instructor.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Instructor Dashboard</div>
+    <nav>
+      <ul>
+        <li><a href="instructor.html">Dashboard</a></li>
+        <li><a href="index.html">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="main-container">
+    <aside>
+      <ul>
+        <li onclick="location.href='instructor.html'"><i class="fas fa-home"></i> Dashboard</li>
+        <li onclick="location.href='index.html'"><i class="fas fa-sign-out-alt"></i> Logout</li>
+      </ul>
+    </aside>
+
+    <main>
+      <section class="profile-section">
+        <h2>Instructor Profile</h2>
+        <form id="profileForm">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" value="Aarav Kumar" disabled>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" value="aarav.kumar@example.com" disabled>
+
+          <label for="phone">Phone:</label>
+          <input type="text" id="phone" value="+91 9876543210" disabled>
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" value="password123" disabled>
+
+          <div class="profile-buttons">
+            <button type="button" id="editBtn" class="new-class-btn"><i class="fas fa-edit"></i> Edit Profile</button>
+            <button type="submit" id="saveBtn" class="new-class-btn" disabled><i class="fas fa-save"></i> Save Changes</button>
+            <button type="button" id="logoutBtn" class="new-class-btn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    &copy; 2025 EduTrack. All Rights Reserved.
+  </footer>
+
+  <script src="settings.js"></script>
+</body>
+</html>

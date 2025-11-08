@@ -1,0 +1,291 @@
+/* ===== Base Layout ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f8fc;        /* light neutral background */
+  color: #333;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+/* ===== Header ===== */
+.topbar {
+  background: #ffffff;
+  border-bottom: 2px solid #e5e3f0; /* light lavender border */
+  color: #5e4b8b;                   /* muted purple */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.topbar h1 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.back-btn {
+  background: transparent;
+  border: none;
+  color: #8e6edc;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* ===== Card Styling ===== */
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e3f0;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* ===== Profile ===== */
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.profile-header {
+  display: flex;
+  gap: 20px;
+}
+
+.avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #d1c4f7; /* soft purple border */
+}
+
+.info {
+  flex: 1;
+  text-align: left;
+}
+
+.profile-view h2 {
+  margin: 0 0 5px;
+  color: #5e4b8b;
+}
+
+.profile-view p {
+  margin: 3px 0;
+  color: #444;
+}
+
+.muted {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.profile-actions {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  background: #8e6edc; /* purple */
+  border: none;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: #7b5fc8;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 1px solid #8e6edc;
+  color: #8e6edc;
+}
+
+.btn.outline:hover {
+  background: #f3effd;
+}
+
+.btn.danger {
+  background: #e74c3c;
+}
+
+/* Hide elements */
+.hidden {
+  display: none;
+}
+
+.hidden-file {
+  display: none;
+}
+
+/* ===== Profile Form ===== */
+#profileForm label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #5e4b8b;
+}
+
+#profileForm input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.form-actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+/* ===== Analytics ===== */
+.big-stat {
+  text-align: center;
+}
+
+.big-number {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #8e6edc;
+}
+
+.change {
+  color: green;
+  font-size: 0.85rem;
+}
+
+.mini-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.break-item {
+  margin-bottom: 12px;
+}
+
+.break-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bar {
+  background: #eee;
+  height: 10px;
+  border-radius: 6px;
+  margin-top: 4px;
+  overflow: hidden;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  background: #8e6edc;
+}
+
+.bar.purple span { background: #8e6edc; }
+.bar.blue span   { background: #3498db; }
+.bar.green span  { background: #27ae60; }
+
+/* ===== Skills ===== */
+.skill-row {
+  margin-bottom: 12px;
+}
+
+.skill-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #5e4b8b;
+}
+
+.skill-bar {
+  background: #eee;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 10px;
+  margin-top: 4px;
+}
+
+.skill-bar span {
+  display: block;
+  height: 100%;
+  background: #8e6edc;
+}
+
+/* ===== Achievements ===== */
+.achievements {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievements li {
+  margin-bottom: 12px;
+  color: #444;
+}
+
+/* ===== Certifications ===== */
+.cert-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.cert-actions button {
+  margin-left: 6px;
+}
+
+.verified {
+  color: #28a745;
+  font-size: 0.85rem;
+  margin-left: 6px;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 0.85rem;
+  color: #5e4b8b;
+  border-top: 1px solid #e5e3f0;
+  background: #fff;
+  font-weight: bold;
+}
+.avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;              /* circular */
+  background-color: #ccc;          /* grey placeholder */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  color: #fff;
+  position: relative;
+  border: 2px solid #8e6edc;      /* optional purple border */
+}
+
+.avatar::before {
+  content: "\f007";                /* Font Awesome user icon */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Profile & Analytics</title>
+
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="analytics.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="back-btn" onclick="history.back()">← Back</button>
+    <h1>Profile & Analytics</h1>
+    <div></div>
+  </header>
+
+  <main class="container">
+
+    <!-- PROFILE CARD -->
+    <div class="profile-card">
+      <div class="profile-header">
+       <div class="avatar"></div>
+        <div class="info">
+
+          <!-- Display view -->
+          <div class="profile-view">
+            <h2 id="stuName">sai</h2>
+            <p id="stuId">STU2024001</p>
+            <p class="muted" id="stuProgram">Computer Science</p>
+            <p class="muted" id="stuYear">3rd Year</p>
+            <p class="muted" id="stuEmail">sai@university.edu</p>
+
+            <!-- Action buttons -->
+            <div class="profile-actions">
+              <button id="editProfileBtn" class="btn outline">
+                <i class="fa-solid fa-pen-to-square"></i> Edit Profile
+              </button>
+              <button id="exportBtn" class="btn">
+                <i class="fa-solid fa-file-export"></i> Export Portfolio
+              </button>
+              <label for="certUpload" class="btn outline">
+                <i class="fa-solid fa-upload"></i> Upload Certificate
+              </label>
+              <input id="certUpload" type="file" accept=".pdf,.png,.jpg" class="hidden-file">
+              <button id="viewTimetableBtn" class="btn">
+  <i class="fa-solid fa-calendar-days"></i> View Timetable
+</button>
+            </div>
+          </div>
+
+          <!-- Edit form (hidden initially) -->
+          <form id="profileForm" class="hidden">
+            <label>Full Name</label>
+            <input id="nameInput" value="sai" />
+
+            <label>Email</label>
+            <input id="emailInput" value="sai@university.edu" />
+
+            <label>Program</label>
+            <input id="programInput" value="Computer Science" disabled />
+
+            <label>Year</label>
+            <input id="yearInput" value="3rd Year" disabled />
+
+            <div class="form-actions">
+              <button id="saveProfile" type="button" class="btn">Save Changes</button>
+              <button id="cancelEdit" type="button" class="btn outline">Cancel</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ATTENDANCE ANALYTICS -->
+    <section class="analytics card">
+      <h2>Attendance Analytics</h2>
+      <div class="attendance-grid">
+        <div class="big-stat">
+          <div class="big-number">94%</div>
+          <p>Overall Attendance Rate</p>
+          <span class="change">+2% from last month</span>
+        </div>
+        <div class="mini-stats">
+          <div><strong>100%</strong><span>This Week</span></div>
+          <div><strong>96%</strong><span>This Month</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACTIVITY BREAKDOWN -->
+    <section class="analytics card">
+      <h2>Activity Breakdown</h2>
+      <div class="breakdown">
+        <div class="break-item">
+          <div class="break-top"><span class="label">Lectures</span><span class="percent">45%</span></div>
+          <div class="bar"><span style="width:45%"></span></div>
+        </div>
+        <div class="break-item">
+          <div class="break-top"><span class="label">Tutorials</span><span class="percent">25%</span></div>
+          <div class="bar purple"><span style="width:25%"></span></div>
+        </div>
+        <div class="break-item">
+          <div class="break-top"><span class="label">Labs</span><span class="percent">20%</span></div>
+          <div class="bar blue"><span style="width:20%"></span></div>
+        </div>
+        <div class="break-item">
+          <div class="break-top"><span class="label">Study Groups</span><span class="percent">10%</span></div>
+          <div class="bar green"><span style="width:10%"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="analytics card">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skill-row"><div class="skill-label">JavaScript <span>85%</span></div><div class="skill-bar"><span style="width:85%"></span></div></div>
+        <div class="skill-row"><div class="skill-label">React <span>78%</span></div><div class="skill-bar"><span style="width:78%"></span></div></div>
+        <div class="skill-row"><div class="skill-label">Python <span>92%</span></div><div class="skill-bar"><span style="width:92%"></span></div></div>
+        <div class="skill-row"><div class="skill-label">Database Design <span>70%</span></div><div class="skill-bar"><span style="width:70%"></span></div></div>
+        <div class="skill-row"><div class="skill-label">UI/UX Design <span>65%</span></div><div class="skill-bar"><span style="width:65%"></span></div></div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section class="analytics card">
+      <h2>Recent Achievements</h2>
+      <ul class="achievements">
+        <li><strong>Perfect Attendance</strong> — Jan 2024<br><small>100% attendance for 3 consecutive months</small></li>
+        <li><strong>Top Performer</strong> — Dec 2023<br><small>Highest grades in Computer Science module</small></li>
+        <li><strong>Leadership Award</strong> — Nov 2023<br><small>Led successful group project presentation</small></li>
+      </ul>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="card">
+      <h2>Certifications</h2>
+      <ul id="certList">
+  <li class="cert-item">
+    <div class="cert-info">
+      <strong>AWS Cloud Practitioner – Amazon Web Services • 2023</strong>
+      <span class="verified">Verified</span>
+    </div>
+    <div class="cert-actions">
+      <button class="remove-cert">❌</button>
+    </div>
+  </li>
+  <li class="cert-item">
+    <div class="cert-info">
+      <strong>React Developer Certification – Meta • 2023</strong>
+      <span class="verified">Verified</span>
+    </div>
+    <div class="cert-actions">
+      <button class="remove-cert">❌</button>
+    </div>
+  </li>
+</ul>
+      <label for="certUpload" class="upload-btn">Add Certification</label>
+      <input type="file" id="certUpload" style="display:none;">
+    </section>
+
+    <!-- SIGN OUT -->
+    <div class="sign-out">
+      <button id="signOut" class="btn danger">Sign Out</button>
+    </div>
+
+  </main>
+
+  <script src="analytics.js"></script>
+  <script>
+  document.getElementById("viewTimetableBtn").addEventListener("click", () => {
+    window.location.href = "timetable.html";
+  });
+</script>
+</body>
+</html>
+
+
+

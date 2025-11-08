@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduTrack</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="icon">&#127891;</div>
+      <h1>EduTrack</h1>
+      <p>Modern attendance and activity management for educational institutions</p>
+    </header>
+
+<main>
+  <!-- Student card -->
+  <section class="card">
+    <div class="card-icon">📱</div>
+    <h2>Student</h2>
+    <p>Mobile-optimized interface for attendance tracking and activity management</p>
+    <ul>
+      <li>QR Code Attendance Scanner</li>
+      <li>Activity Planner & Dashboard</li>
+      <li>Analytics & Portfolio</li>
+    </ul>
+    <button class="btn" id="studentBtn">Continue as Student</button>
+  </section>
+
+  <!-- Instructor card -->
+  <section class="card">
+    <div class="card-icon">🖥️</div>
+    <h2>Instructor</h2>
+    <p>Desktop-optimized dashboard for managing attendance and generating reports</p>
+    <ul class="orange">
+      <li>QR Code Generator with Timer</li>
+      <li>Real-time Attendance Management</li>
+      <li>Analytics & Reports Export</li>
+    </ul>
+    <button class="btn" id="instructorBtn">Continue as Instructor</button>
+  </section>
+</main>
+
+  </div>
+
+  <!-- Student login modal -->
+
+  <div id="studentModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Student Login</h2>
+      <form id="studentForm">
+        <label>Name</label>
+        <input type="text" id="studentName" placeholder="Enter your name" required>
+
+
+    <label>Email</label>
+    <input type="email" required>
+
+    <label>Password</label>
+    <input type="password" required>
+
+    <button type="submit" class="btn">Login</button>
+  </form>
+</div>
+
+  </div>
+
+  <!-- Instructor login modal -->
+
+  <div id="instructorModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Instructor Login</h2>
+      <form id="instructorForm">
+        <label>Email</label>
+        <input type="email" required>
+
+
+    <label>Password</label>
+    <input type="password" required>
+
+    <button type="submit" class="btn">Login</button>
+  </form>
+</div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+

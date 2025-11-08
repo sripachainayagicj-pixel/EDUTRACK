@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Attendance Scanner</title>
+<link rel="stylesheet" href="scan.css">
+<!-- Font Awesome for QR icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  .success-msg {
+    font-size: 20px;
+    color: #34c759; /* green */
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  .scan-btn {
+    margin-top: 15px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .grid-item {
+    margin: 20px;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  .live-tag {
+    background-color: #ff3b30;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+</style>
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <button onclick="history.back()" class="back-btn">←</button>
+      <h1>Attendance Scanner</h1>
+      <p>Scan QR code to mark attendance</p>
+    </header>
+    <section class="grid-item card center">
+  <h2>Ready to Scan</h2>
+  <p>Position the QR code within the frame when scanning starts</p>
+
+  <!-- QR code scanner container -->
+  <div id="qr-reader" style="width:300px;"></div>
+
+  <!-- Attendance success message -->
+  <div id="success" class="success-msg" style="display:none;"></div>
+
+  <!-- Buttons -->
+  <button class="scan-btn" id="startScan">
+    <i class="fa-solid fa-camera"></i> Start Camera & Scan
+  </button>
+  <button class="scan-btn" id="scanAgain" style="display:none;">
+    Scan Another Code
+  </button>
+</section>
+    <section class="grid-item card">
+      <h2>Current Class <span class="live-tag">Live</span></h2>
+      <h3>Mathematics Tutorial</h3>
+      <p>11:30 AM – 12:30 PM<br>Room 205</p>
+    </section>
+
+    <section class="grid-item card">
+      <h2>Recent Attendance</h2>
+      <ul class="attendance-list">
+        <li>
+          <b>Computer Science 101</b><br>
+          present • 2024-01-15 • 09:15 AM • Room 301
+        </li>
+        <li>
+          <b>Mathematics 201</b><br>
+          present • 2024-01-14 • 11:45 AM • Room 205
+        </li>
+        <li>
+          <b>Physics Lab</b><br>
+          late • 2024-01-13 • 02:30 PM • Lab Building
+        </li>
+        <li>
+          <b>Chemistry 101</b><br>
+          present • 2024-01-12 • 10:15 AM • Room 150
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- QR Scanner Library -->
+  <script src="https://unpkg.com/html5-qrcode"></script>
+
+<script>
+const startBtn = document.getElementById('startScan');
+const scanAgainBtn = document.getElementById('scanAgain');
+const successBox = document.getElementById('success');
+const qrReaderDiv = document.getElementById('qr-reader');
+
+let html5QrCode;
+
+function startScanner() {
+    startBtn.style.display = 'none';
+    successBox.style.display = 'none';
+    scanAgainBtn.style.display = 'none';
+    qrReaderDiv.style.display = 'block';
+
+    html5QrCode = new Html5Qrcode("qr-reader");
+
+    html5QrCode.start(
+        { facingMode: "environment" },
+        { fps: 10, qrbox: 250 },
+        (decodedText) => {
+            html5QrCode.stop().then(() => {
+                qrReaderDiv.style.display = 'none';
+                const now = new Date();
+                const timeStr = now.toLocaleTimeString();
+                successBox.style.display = 'block';
+                successBox.innerHTML = `
+                    ✅ Attendance Marked!<br>
+                    Successfully checked in at ${timeStr}<br>
+                `;
+                scanAgainBtn.style.display = 'inline-block';
+            });
+        },
+        (errorMessage) => { /* ignore errors */ }
+    ).catch(err => {
+        alert("Camera error: " + err);
+        startBtn.style.display = 'block';
+    });
+
+    // Auto stop after 10 seconds if no scan
+    setTimeout(() => {
+        if(html5QrCode.getState() === 2) {
+            html5QrCode.stop().then(() => {
+                qrReaderDiv.style.display = 'none';
+                const now = new Date();
+                const timeStr = now.toLocaleTimeString();
+                successBox.style.display = 'block';
+                successBox.innerHTML = `
+                    ✅ Attendance Marked!<br>
+                    Successfully checked in at ${timeStr}<br>
+                `;
+                scanAgainBtn.style.display = 'inline-block';
+            });
+        }
+    }, 10000);
+}
+
+startBtn.addEventListener('click', startScanner);
+scanAgainBtn.addEventListener('click', startScanner);
+</script>
+</body>
+</html>

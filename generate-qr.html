@@ -1,0 +1,64 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>QR Code Generator</title> 
+  <link rel="stylesheet" href="generate-qr.css"> 
+  <!-- QRCode.js library --> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script> 
+</head> 
+<body> 
+  <header> 
+    <a href="instructor.html" class="back-btn">← Back to Dashboard</a> 
+    <h1>Attendance Management</h1> 
+  </header> 
+  
+  <main> 
+    <section class="generator"> 
+      <h2>QR Code Generator</h2> 
+      <label for="classSelect">Select Class:</label> 
+      <select id="classSelect"> 
+        <option value="Computer Science 101">Computer Science 101 (Room 301)</option> 
+        <option value="Advanced Mathematics">Advanced Mathematics (Room 205)</option> 
+        <option value="Physics Laboratory">Physics Laboratory (Lab Building)</option> 
+      </select> 
+      <button id="generateBtn">Generate QR Code</button> 
+      
+      <div id="qrSection" class="hidden"> 
+        <h3 id="selectedClass"></h3> 
+        <div id="qrcode"></div> 
+        <p id="timer">20s remaining</p> 
+        <button id="regenBtn">Regenerate QR Code</button> 
+      </div> 
+      <p id="expiredMsg" class="expired hidden">QR code expired</p> 
+    </section> 
+    
+    <section class="realtime"> 
+      <h2>Real-time Check-ins</h2> 
+      <p id="presentCount">0 Present</p> 
+      <table id="checkinTable"> 
+        <thead> 
+          <tr><th>Name</th><th>ID</th><th>Time</th><th>Method</th></tr> 
+        </thead> 
+        <tbody></tbody> 
+      </table> 
+    </section> 
+    
+    <section class="manual"> 
+      <h2>Manual Attendance Override</h2> 
+      <input type="text" id="searchStudent" placeholder="Search students by name or ID..."> 
+      <div class="students" id="studentList"> 
+        <!-- Example students --> 
+        <div class="student"><span>Aarav Sharma (STU004)</span><button>Mark Present</button></div> 
+        <div class="student"><span>Tanya Joshi (STU005)</span><button>Mark Present</button></div> 
+        <div class="student"><span>Ishaan Nair (STU006)</span><button>Mark Present</button></div> 
+        <div class="student"><span>Sahana Krishnan (STU007)</span><button>Mark Present</button></div> 
+        <div class="student"><span>Swathi (STU008)</span><button>Mark Present</button></div> 
+      </div> 
+    </section> 
+  </main> 
+  
+  <script src="generate-qr.js"></script> 
+</body> 
+</html>

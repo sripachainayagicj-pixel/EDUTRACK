@@ -1,0 +1,87 @@
+/* ===== Report Page Styling ===== */
+.view-reports h2 {
+  color: #5e4b8b;
+  margin-bottom: 20px;
+}
+
+.report-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.report-controls label {
+  font-weight: bold;
+  color: #5e4b8b;
+}
+
+.report-controls select,
+.report-controls input[type="date"] {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.new-class-btn {
+  background: #8e6edc;
+  border: none;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: background 0.2s;
+}
+
+.new-class-btn:hover {
+  background: #7b5fc8;
+}
+
+#reportContainer {
+  background: #ffffff;
+  border: 1px solid #e5e3f0;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.present-section h4 {
+  color: #28a745;
+  margin-bottom: 5px;
+}
+
+.absent-section h4 {
+  color: #dc3545;
+  margin-bottom: 5px;
+}
+
+.student-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.student-item:last-child {
+  border-bottom: none;
+}
+
+#backBtn {
+  background: #f0f0f0;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #5e4b8b;
+  margin-bottom: 15px;
+}
+
+#backBtn:hover {
+  background: #e5e3f0;
+}

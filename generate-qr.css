@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f8fc;
+  color: #333;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 15px 25px;
+  border-bottom: 2px solid #e5e3f0;
+}
+
+header h1 {
+  color: #5e4b8b;
+  margin: 0;
+}
+
+.back-btn {
+  color: #8e6edc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  padding: 30px;
+}
+
+h2 {
+  color: #5e4b8b;
+}
+
+.generator, .realtime, .manual {
+  background: #fff;
+  border: 1px solid #e5e3f0;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+button {
+  background: #8e6edc;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #7b5fc8;
+}
+
+.hidden { display: none; }
+.expired { color: red; font-weight: bold; }
+
+#qrcode {
+  margin: 20px auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+th, td {
+  border: 1px solid #e5e3f0;
+  padding: 8px;
+  text-align: center;
+}
+.students .student {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
